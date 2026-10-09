@@ -1,0 +1,12 @@
+# NetAudit - dependencias
+#
+# NetAudit funciona con la biblioteca estandar de Python 3.11+ y NO necesita
+# ninguna dependencia de terceros en tiempo de ejecucion.
+#
+# Se usa nmap como dependencia OBLIGATORIA del sistema (no se instala con pip).
+# Consulta el README.md para los comandos de instalacion por sistema operativo.
+#
+# Este archivo existe para dejar constancia de la decision de diseno y como
+# punto de extension si en el futuro se anaden dependencias opcionales.
+
+# (vacio intencionalmente - solo biblioteca estandar)

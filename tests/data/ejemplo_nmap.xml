@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="file:///usr/bin/xsltproc/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Thu Oct  8 09:15:22 2026 as: nmap -sV -sC -A -T4 -oX - 192.168.1.0/29 -->
+<nmaprun scanner="nmap" args="nmap -sV -sC -A -T4 -oX - 192.168.1.0/29" start="1791526522" startstr="Thu Oct  8 09:15:22 2026" version="7.80" xmloutputversion="1.05">
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1791526522" endtime="1791526560"><status state="up" reason="echo-reply" reason_ttl="128"/>
+<address addr="192.168.1.1" addrtype="ipv4"/>
+<hostnames>
+<hostname name="router.lan" type="user"/>
+</hostnames>
+<ports>
+<extraports state="closed" count="996"/>
+<extraports state="filtered" count="4"/>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="7.4" extrainfo="Ubuntu 16.04 (Ubuntu Linux 4.4.0-66-generic) libssh2" method="probed" conf="10"><banner>SSH-2.0-OpenSSH_7.4p1 Ubuntu-1ubuntu2.6&#13;&#10;</banner></service>
+<script id="ssh-hostkey" output="  2048 aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66:77:88:99 (RSA)&#13;&#10;      256 11:22:33:44:55:66:77:88:99:aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66 (ED25519)"/>
+</port>
+<port protocol="tcp" portid="23"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="telnet" product="SunOS telnetd" version="1.0" method="probed" conf="10"><banner>SunOS telnetd 1.0&#13;&#10;</banner></service>
+<script id="banner" output="SunOS telnetd 1.0&#13;&#10;"/>
+</port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.2.4" extrainfo="(Ubuntu)" method="probed" conf="10">
+<banner>HTTP/1.1 200 OK&#13;&#10;Server: Apache/2.2.4 (Ubuntu)&#13;&#10;Date: Thu, 08 Oct 2026 09:15:30 GMT&#13;&#10;Content-Type: text/html; charset=UTF-8&#13;&#10;Set-Cookie: PHPSESSID=abc123def456; path=/; httponly&#13;&#10;Set-Cookie: tracking=xyz789; path=/&#13;&#10;Content-Length: 1234&#13;&#10;Connection: close&#13;&#10;&#13;&#10;&lt;html&gt;&lt;title&gt;Panel de administracion&lt;/title&gt;&#13;&#10;Allowed methods: GET, HEAD, POST, PUT, DELETE, TRACE&#13;&#10;</banner></service>
+<script id="http-title" output="Title: Panel de administracion"/>
+<script id="http-methods" output="  Allowed methods: GET, HEAD, POST, PUT, DELETE, TRACE&#13;&#10;  Potentially risky methods: PUT, DELETE, TRACE"/>
+<script id="http-git" output="&#13;&#10;Directory .git/ exposed&#13;&#10;   .git/config is readable"/>
+<script id="http-server-header" output="Server: Apache/2.2.4 (Ubuntu)"/>
+</port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="https" product="nginx" version="1.18.0" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="microsoft-ds" product="Windows Server 2008 R2 host" version="SP1" method="probed" conf="10"/>
+<script id="smb-os-discovery" output="  OS: Windows Server 2008 R2 SP1 (Windows Server 2006.1 SP1)&#13;&#10;  NetBIOS: TEST-PC&#13;&#10;  Dialect: NT LM 0.12&#13;&#10;  NT LM 0.12 present"/>
+</port>
+<port protocol="tcp" portid="8161"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache ActiveMQ" version="5.15.0" method="probed" conf="10"><banner>HTTP/1.1 200 OK&#13;&#10;Server: Apache-Coyote/1.1&#13;&#10;Content-Type: text/html&#13;&#10;&#13;&#10;&lt;html&gt;&lt;title&gt;ActiveMQ Web Console&lt;/title&gt;</banner></service></port>
+</ports>
+<os>
+<osmatch name="Linux 3.2 - 4.9" accuracy="94"><osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"/></osmatch>
+<osmatch name="Linux 4.15 - 5.6" accuracy="91"><osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"/></osmatch>
+</os>
+<hostscript>
+<script id="smb2-time" output="  date: 2026-10-08 09:15:30,000"/>
+</hostscript>
+</host>
+<host starttime="1791526522" endtime="1791526530"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.1.10" addrtype="ipv4"/>
+<hostnames>
+<hostname name="web01.lan" type="PTR"/>
+</hostnames>
+<ports>
+<extraports state="closed" count="997"/>
+<extraports state="filtered" count="3"/>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ftp" product="vsftpd" version="2.3.4" method="probed" conf="10"><banner>220 (vsFTPd 2.3.4)&#13;&#10;530 Please login with your user account and password.&#13;&#10;</banner></service>
+<script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)"/>
+<script id="banner" output="220 (vsFTPd 2.3.4)"/>
+</port>
+<port protocol="tcp" portid="161"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="snmp" product="net-snmp" version="5.7" extrainfo="Linux" method="probed" conf="10"><banner>SNMPv1 public&#13;&#10;SNMPv2c community = public&#13;&#10;</banner></service>
+<script id="snmp-info" output="  System uptime: 12 days&#13;&#10;  communityString: public&#13;&#10;  System description: Linux gateway 2.6.32"/>
+</port>
+<port protocol="tcp" portid="6379"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="redis" product="Redis" version="3.0.6" method="probed" conf="10"><banner>Redis version 3.0.6&#13;&#10;redis_version:3.0.6&#13;&#10;</banner></service></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mysql" product="MySQL" version="5.5.5" extrainfo="MariaDB 10.1.21" method="probed" conf="10"><banner>5.5.5-10.1.21-MariaDB&#13;&#10;host '192.168.1.10' is not allowed to connect to this MySQL server&#13;&#10;</banner></service></port>
+<port protocol="tcp" portid="6443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="https" product="Kubernetes" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http-proxy" product="Apache httpd" version="2.2.4" method="probed" conf="10"><banner>HTTP/1.1 200 OK&#13;&#10;Server: Apache/2.2.4 (Ubuntu)&#13;&#10;Content-Type: text/html&#13;&#10;&#13;&#10;.env file found at /.env&#13;&#10;/actuator/env exposed with Spring Boot&#13;&#10;/phpmyadmin/ is reachable&#13;&#10;</banner></service>
+<script id="http-config" output=".env file found at /.env"/>
+<script id="http-enum" output="/actuator/env&#13;&#10;/phpmyadmin/&#13;&#10;/admin/"/>
+</port>
+<port protocol="tcp" portid="9200"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Elasticsearch" version="6.8.0" method="probed" conf="10"><banner>HTTP/1.1 200 OK&#13;&#10;Server: Elasticsearch&#13;&#10;Content-Type: application/json&#13;&#10;&#13;&#10;{&quot;name&quot;:&quot;node-1&quot;,&quot;cluster_name&quot;:&quot;produccion&quot;}&#13;&#10;</banner></service></port>
+</ports>
+<os>
+<osmatch name="Linux 3.2 - 4.9" accuracy="97"><osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="97"/></osmatch>
+</os>
+</host>
+<host starttime="1791526522" endtime="1791526525"><status state="up" reason="echo-reply" reason_ttl="128"/>
+<address addr="192.168.1.15" addrtype="ipv4"/>
+<hostnames/>
+<ports>
+<extraports state="closed" count="1000"/>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="https" product="nginx" version="1.18.0" method="probed" conf="10"/>
+<script id="ssl-cert" output="Subject: commonName=app.example.com&#13;&#10;Issuer: commonName=app.example.com&#13;&#10;Self-signed: yes&#13;&#10;Not valid before: Jan  1 00:00:00 2024 GMT&#13;&#10;Not valid after : Jan  1 00:00:00 2020 GMT&#13;&#10;TLSv1.0 supported"/>
+<script id="ssl-enum-ciphers" output="SSL/TLS protocols: TLSv1, TLSv1.1, TLSv1.2&#13;&#10;  Cipher : DES-CBC3-SHA&#13;&#10;Server does not support SNI"/>
+</port>
+</ports>
+</host>
+<runstats>
+<finished time="1791526570" timestr="Thu Oct  8 09:16:10 2026" elapsed="48.00" summary="Nmap done at Thu Oct  8 09:16:10 2026; 3 IP addresses (3 hosts up) scanned in 48.00 seconds" exit="success"/>
+</runstats>
+</nmaprun>

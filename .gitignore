@@ -1,0 +1,37 @@
+# Logs generados en tiempo de ejecucion
+logs/
+*.log
+
+# Informes HTML generados por los escaneos
+report_*.html
+reporte_*.html
+*.xml.bak
+
+# Salidas de nmap crudas
+nmap_*.xml
+scan_*.xml
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Editores / SO
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+.DS_Store
+
+# Credenciales
+.env
+*.key
+*.pem
