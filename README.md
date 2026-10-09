@@ -395,5 +395,10 @@ Los tests **no realizan escaneos reales ni acceden a la red**.
 
 ## Licencia y uso responsable
 
-Herramienta de auditoría defensiva. Úsela solo con autorización escrita, sobre
-redes propias o sobre las que tenga permiso contractual explícito.
+Distribuida bajo la licencia [MIT](LICENSE). Puedes usarla, modificarla y
+redistribuirla, incluso con fines comerciales, siempre que conserves el aviso de
+copyright.
+
+El código es una herramienta de auditoría defensiva. Úsela solo con
+autorización escrita, sobre redes propias o sobre las que tenga permiso
+contractual explícito.
